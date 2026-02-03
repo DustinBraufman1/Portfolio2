@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --border-color: #e0e0e0;
+    --hover-color: #666666;
+    --font-body: "neue-haas-grotesk-text", "Helvetica Neue", Arial, sans-serif;
+    --font-title: "neue-haas-grotesk-display", "Helvetica Neue", Arial, sans-serif;
+    --font-subtitle: "neue-haas-grotesk-text", "Helvetica Neue", Arial, sans-serif;
+    --font-name: "akzidenz-grotesk-extended", "Arial Black", sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Home Page - Typing Animation */
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.name-title {
+    font-family: var(--font-name);
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.nav-buttons.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-btn {
+    font-family: var(--font-subtitle);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 12px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    border-bottom-color: var(--text-color);
+}
+
+/* Work Page Navigation */
+.work-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 40px;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 100;
+}
+
+.back-link {
+    font-family: var(--font-name);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    display: inline-block;
+}
+
+.back-link:hover {
+    opacity: 0.6;
+}
+
+.logo-image {
+    height: 30px;
+    width: auto;
+    display: block;
+}
+
+/* Work Grid */
+.work-container {
+    padding: 120px 40px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.work-item {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.work-item:hover {
+    opacity: 0.6;
+}
+
+.work-thumbnail {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #f5f5f5;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-placeholder {
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    padding: 20px;
+}
+
+.work-title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Project Detail Page */
+.project-detail {
+    padding: 120px 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-detail-title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+.project-images {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-placeholder-large {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 18px;
+}
+
+/* About Page */
+.about-container {
+    padding: 120px 40px 60px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .name-title {
+        font-size: 32px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .work-nav {
+        padding: 20px 25px;
+    }
+
+    .work-container {
+        padding: 100px 25px 40px;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .project-detail {
+        padding: 100px 25px 40px;
+    }
+
+    .project-detail-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .about-container {
+        padding: 100px 25px 40px;
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+
+    .about-content {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .name-title {
+        font-size: 24px;
+    }
+
+    .nav-btn {
+        font-size: 16px;
+    }
+
+    .work-grid {
+        gap: 40px;
+    }
+
+    .work-title {
+        font-size: 16px;
+    }
+}
