@@ -21,6 +21,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.5;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 /* Home Page - Typing Animation */
@@ -41,6 +42,23 @@ body {
     letter-spacing: 0.02em;
     margin-bottom: 60px;
     text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.name-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: width 0.6s ease;
+}
+
+.name-title.underlined::after {
+    width: 100%;
 }
 
 .nav-buttons {
@@ -276,5 +294,15 @@ body {
 
     .work-title {
         font-size: 16px;
+    }
+}
+
+/* Page Transition Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

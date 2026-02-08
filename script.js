@@ -12,10 +12,14 @@ function typeWriter() {
         const typingSpeed = 100 + Math.random() * 50;
         setTimeout(typeWriter, typingSpeed);
     } else {
+        // Add underline after typing completes
+        setTimeout(() => {
+            nameElement.classList.add('underlined');
+        }, 300);
         // Show navigation buttons after typing completes
         setTimeout(() => {
             navButtons.classList.add('show');
-        }, 500);
+        }, 800);
     }
 }
 
