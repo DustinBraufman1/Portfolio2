@@ -43,7 +43,7 @@
 
             <!-- Example: Image on left, text on right -->
             <div class="grid-item">
-                <img src="../project images/billboard.png" alt="Project image" class="project-img size-large">
+                <img src="../project images/Asset 1@dp.svg" alt="Project image" class="project-img size-large">
             </div>
             <div class="grid-item">
                 <div class="text-content">
@@ -54,13 +54,22 @@
 
             <!-- Example: Two images side by side -->
             <div class="grid-item">
-                <img src="../project-images/image4.jpg" alt="Project image" class="project-img size-small">
+                <img src="../project images/billboard.png" alt="Project image" class="project-img size-small">
             </div>
             <div class="grid-item">
                 <img src="../project-images/image5.jpg" alt="Project image" class="project-img size-small">
             </div>
         </div>
     </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Enlarged image" class="lightbox-image" id="lightbox-img">
+        <div class="lightbox-caption">Click image to zoom • ESC to close</div>
+    </div>
+
     <script src="../hamburger.js"></script>
+    <script src="../lightbox.js"></script>
 </body>
 </html>
