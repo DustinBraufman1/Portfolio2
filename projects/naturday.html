@@ -9,20 +9,58 @@
 </head>
 <body>
     <nav class="work-nav">
-        <a href="../work.html" class="back-link">
-            <img src="../site images/logogogo.png" alt="Dustin Braufman" class="logo-image">
-        </a>
+        <img src="../site images/logogogo.png" alt="Dustin Braufman" class="logo-image" id="hamburger-trigger">
     </nav>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" id="hamburger-menu">
+        <div class="hamburger-content">
+            <a href="../main.html" class="hamburger-link">Home</a>
+            <a href="../about.html" class="hamburger-link">About</a>
+            <a href="../work.html" class="hamburger-link">Work</a>
+        </div>
+    </div>
 
     <main class="project-detail">
         <h1 class="project-detail-title">Naturday Rebrand</h1>
 
-        <div class="project-images">
-            <!-- Add your project images here -->
-            <div class="image-placeholder-large">Image 1</div>
-            <div class="image-placeholder-large">Image 2</div>
-            <div class="image-placeholder-large">Image 3</div>
+        <div class="project-grid">
+            <!-- Example: Full-width image -->
+            <div class="grid-item full-width">
+                <img src="../project images/cans.png" alt="Project image" class="project-img">
+            </div>
+
+            <!-- Example: Two column layout with text and image -->
+            <div class="grid-item">
+                <div class="text-content">
+                    <h3>Project Overview</h3>
+                    <p>In class rebrand of Anheuser-Busch's lemonade beer "Naturday". Intended on repositioning the product to appeal to hard seltzer fans while keeping the fun nature of the original design intact. Project was awarded an honorable mention in AIGA Philadelphia's LOCALLY SOURCED Issue 04.​​​​​​​</p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <img src="../project images/box.png" alt="Project image" class="project-img size-medium">
+            </div>
+
+            <!-- Example: Image on left, text on right -->
+            <div class="grid-item">
+                <img src="../project images/billboard.png" alt="Project image" class="project-img size-large">
+            </div>
+            <div class="grid-item">
+                <div class="text-content">
+                    <h3>Design Process</h3>
+                    <p>Describe your design process, inspiration, or any other details about this project.</p>
+                </div>
+            </div>
+
+            <!-- Example: Two images side by side -->
+            <div class="grid-item">
+                <img src="../project-images/image4.jpg" alt="Project image" class="project-img size-small">
+            </div>
+            <div class="grid-item">
+                <img src="../project-images/image5.jpg" alt="Project image" class="project-img size-small">
+            </div>
         </div>
     </main>
+    <script src="../hamburger.js"></script>
 </body>
 </html>

@@ -9,13 +9,20 @@
 </head>
 <body>
     <nav class="work-nav">
-        <a href="../work.html" class="back-link">
-            <img src="../site images/logogogo.png" alt="Dustin Braufman" class="logo-image">
-        </a>
+        <img src="../site images/logogogo.png" alt="Dustin Braufman" class="logo-image" id="hamburger-trigger">
     </nav>
 
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" id="hamburger-menu">
+        <div class="hamburger-content">
+            <a href="../main.html" class="hamburger-link">Home</a>
+            <a href="../about.html" class="hamburger-link">About</a>
+            <a href="../work.html" class="hamburger-link">Work</a>
+        </div>
+    </div>
+
     <main class="project-detail">
-        <h1 class="project-detail-title">Mako Exterior Services</h1>
+        <h1 class="project-detail-title">PROJECT_Mako Exterior Services</h1>
 
         <div class="project-images">
             <!-- Add your project images here -->
@@ -24,5 +31,6 @@
             <div class="image-placeholder-large">Image 3</div>
         </div>
     </main>
+    <script src="../hamburger.js"></script>
 </body>
 </html>

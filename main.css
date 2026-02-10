@@ -97,8 +97,20 @@ body {
     right: 0;
     padding: 30px 40px;
     background-color: var(--bg-color);
-    border-bottom: 1px solid var(--border-color);
     z-index: 100;
+}
+
+.nav-name {
+    font-family: var(--font-name);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.nav-name:hover {
+    opacity: 0.6;
 }
 
 .back-link {
@@ -119,6 +131,71 @@ body {
     height: 50px;
     width: auto;
     display: block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.logo-image:hover {
+    opacity: 0.6;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hamburger-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hamburger-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.hamburger-link {
+    font-family: var(--font-name);
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--bg-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+    position: relative;
+}
+
+.hamburger-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--bg-color);
+    transition: width 0.3s ease;
+}
+
+.hamburger-link:hover {
+    opacity: 0.7;
+}
+
+.hamburger-link:hover::after {
+    width: 100%;
 }
 
 /* Work Grid */
@@ -154,6 +231,14 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    position: relative;
+}
+
+.thumbnail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .project-placeholder {
@@ -173,7 +258,7 @@ body {
 /* Project Detail Page */
 .project-detail {
     padding: 120px 40px 60px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -184,6 +269,72 @@ body {
     margin-bottom: 60px;
 }
 
+/* 2-Column Grid System */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.grid-item {
+    width: 100%;
+}
+
+/* Full-width items span both columns */
+.grid-item.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Image sizing classes */
+.project-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Small: ~300px height */
+.project-img.size-small {
+    max-height: 300px;
+}
+
+/* Medium: ~500px height */
+.project-img.size-medium {
+    max-height: 500px;
+}
+
+/* Large: ~700px height */
+.project-img.size-large {
+    max-height: 700px;
+}
+
+/* Extra Large: ~900px height */
+.project-img.size-xlarge {
+    max-height: 900px;
+}
+
+/* Text content styling */
+.text-content {
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.text-content h3 {
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Legacy support for old structure */
 .project-images {
     display: flex;
     flex-direction: column;
@@ -264,6 +415,33 @@ body {
     .project-detail-title {
         font-size: 28px;
         margin-bottom: 40px;
+    }
+
+    /* Stack grid to single column on mobile */
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .grid-item.full-width {
+        grid-column: 1;
+    }
+
+    /* Adjust image sizes for mobile */
+    .project-img.size-small {
+        max-height: 250px;
+    }
+
+    .project-img.size-medium {
+        max-height: 400px;
+    }
+
+    .project-img.size-large {
+        max-height: 550px;
+    }
+
+    .project-img.size-xlarge {
+        max-height: 700px;
     }
 
     .about-container {

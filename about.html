@@ -9,10 +9,16 @@
 </head>
 <body>
     <nav class="work-nav">
-        <a href="main.html" class="back-link">
-            <img src="site images/logogogo.png" alt="Dustin Braufman" class="logo-image">
-        </a>
+        <img src="site images/logogogo.png" alt="Dustin Braufman" class="logo-image" id="hamburger-trigger">
     </nav>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" id="hamburger-menu">
+        <div class="hamburger-content">
+            <a href="main.html" class="hamburger-link">Home</a>
+            <a href="work.html" class="hamburger-link">Work</a>
+        </div>
+    </div>
 
     <main class="about-container">
         <h1 class="about-title">About</h1>
@@ -31,5 +37,6 @@
             </p>
         </div>
     </main>
+    <script src="hamburger.js"></script>
 </body>
 </html>
