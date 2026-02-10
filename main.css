@@ -231,7 +231,6 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    position: relative;
 }
 
 .thumbnail-img {
@@ -284,6 +283,12 @@ body {
 /* Full-width items span both columns */
 .grid-item.full-width {
     grid-column: 1 / -1;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.grid-item.full-width .project-img {
+    object-fit: contain;
 }
 
 /* Image sizing classes */
@@ -425,6 +430,7 @@ body {
 
     .grid-item.full-width {
         grid-column: 1;
+        max-width: 100%;
     }
 
     /* Adjust image sizes for mobile */
