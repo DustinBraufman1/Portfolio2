@@ -81,12 +81,22 @@ body {
     color: var(--text-color);
     text-decoration: none;
     padding: 12px 0;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease;
+    position: relative;
 }
 
-.nav-btn:hover {
-    border-bottom-color: var(--text-color);
+.nav-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: width 0.3s ease;
+}
+
+.nav-btn:hover::after {
+    width: 100%;
 }
 
 /* Work Page Navigation */
