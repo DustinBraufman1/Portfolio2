@@ -264,6 +264,15 @@ body {
     line-height: 1.4;
 }
 
+.work-year {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 14px;
+    color: #999;
+    display: block;
+    margin-top: -4px;
+}
+
 /* Project Detail Page */
 .project-detail {
     padding: 120px 40px 60px;
