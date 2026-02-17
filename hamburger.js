@@ -2,8 +2,15 @@
 const hamburgerTrigger = document.getElementById('hamburger-trigger');
 const hamburgerMenu = document.getElementById('hamburger-menu');
 
-// Toggle menu when name is clicked
+const hamburgerIconTrigger = document.getElementById('hamburger-icon-trigger');
+
+// Toggle menu when logo is clicked
 hamburgerTrigger.addEventListener('click', () => {
+    hamburgerMenu.classList.toggle('active');
+});
+
+// Toggle menu when hamburger icon is clicked
+hamburgerIconTrigger.addEventListener('click', () => {
     hamburgerMenu.classList.toggle('active');
 });
 

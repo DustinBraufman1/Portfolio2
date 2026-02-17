@@ -105,10 +105,33 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    padding: 30px 40px;
+    padding: 15px 20px;
     background-color: var(--bg-color);
     z-index: 100;
     border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.hamburger-icon:hover {
+    opacity: 0.6;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: black;
 }
 
 .nav-name {
@@ -139,7 +162,7 @@ body {
 }
 
 .logo-image {
-    height: 50px;
+    height: 75px;
     width: auto;
     display: block;
     cursor: pointer;
@@ -211,15 +234,55 @@ body {
 
 /* Work Grid */
 .work-container {
-    padding: 120px 40px 60px;
+    padding: 0;
     max-width: 1400px;
     margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.work-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 40px;
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 60px;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.4s ease;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-arrow:hover {
+    opacity: 0.5;
+}
+
+.carousel-arrow-left {
+    left: 15px;
+}
+
+.carousel-arrow-right {
+    right: 15px;
 }
 
 .work-item {
@@ -227,6 +290,8 @@ body {
     color: var(--text-color);
     display: block;
     transition: opacity 0.3s ease;
+    min-width: calc((100% - 60px) / 3);
+    max-width: calc((100% - 60px) / 3);
 }
 
 .work-item:hover {
@@ -425,12 +490,16 @@ body {
     }
 
     .work-container {
-        padding: 100px 25px 40px;
+        padding: 0;
     }
 
-    .work-grid {
-        grid-template-columns: 1fr;
-        gap: 60px;
+    .carousel-wrapper {
+        padding: 0 40px;
+    }
+
+    .work-item {
+        min-width: calc(100% - 30px);
+        max-width: calc(100% - 30px);
     }
 
     .project-detail {
@@ -492,10 +561,6 @@ body {
         font-size: 16px;
     }
 
-    .work-grid {
-        gap: 40px;
-    }
-
     .work-title {
         font-size: 16px;
     }
@@ -532,7 +597,6 @@ body {
 
 .lightbox-image.zoomed {
     cursor: zoom-out;
-    transform: scale(2);
 }
 
 .lightbox-close {
