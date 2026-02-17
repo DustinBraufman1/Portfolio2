@@ -108,6 +108,7 @@ body {
     padding: 30px 40px;
     background-color: var(--bg-color);
     z-index: 100;
+    border-bottom: 2px solid black;
 }
 
 .nav-name {
