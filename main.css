@@ -12,7 +12,7 @@
     --font-body: "neue-haas-grotesk-text", "Helvetica Neue", Arial, sans-serif;
     --font-title: "neue-haas-grotesk-display", "Helvetica Neue", Arial, sans-serif;
     --font-subtitle: "neue-haas-grotesk-text", "Helvetica Neue", Arial, sans-serif;
-    --font-name: "akzidenz-grotesk-extended", "Arial Black", sans-serif;
+    --font-name: "akzidenz-grotesk-next-extend", sans-serif;
 }
 
 body {
@@ -38,7 +38,7 @@ body {
     font-family: var(--font-name);
     font-weight: 700;
     font-size: 48px;
-    text-transform: uppercase;
+    
     letter-spacing: 0.02em;
     margin-bottom: 60px;
     text-align: center;
