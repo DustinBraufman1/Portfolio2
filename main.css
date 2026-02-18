@@ -234,55 +234,17 @@ body {
 
 /* Work Grid */
 .work-container {
-    padding: 0;
+    padding: 100px 40px 30px;
     max-width: 1400px;
     margin: 0 auto;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.carousel-wrapper {
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 0 60px;
-}
-
-.carousel-track-container {
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-track {
-    display: flex;
-    gap: 30px;
-    transition: transform 0.4s ease;
-}
-
-.carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-70%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 10;
-    transition: opacity 0.3s ease;
-}
-
-.carousel-arrow:hover {
-    opacity: 0.5;
-}
-
-.carousel-arrow-left {
-    left: 15px;
-}
-
-.carousel-arrow-right {
-    right: 15px;
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 25px;
+    justify-items: center;
+    padding-top: 30px;
 }
 
 .work-item {
@@ -290,8 +252,7 @@ body {
     color: var(--text-color);
     display: block;
     transition: opacity 0.3s ease;
-    min-width: calc((100% - 60px) / 3);
-    max-width: calc((100% - 60px) / 3);
+    max-width: 98%;
 }
 
 .work-item:hover {
@@ -299,7 +260,7 @@ body {
 }
 
 .work-thumbnail {
-    width: 100%;
+    width: 90%;
     aspect-ratio: 4 / 3;
     background-color: #ffffff;
     margin-bottom: 15px;
@@ -315,6 +276,14 @@ body {
     object-fit: cover;
     display: block;
 }
+
+/* Add thumb-scale-XX class to thumbnail-img to control size */
+.thumbnail-img.thumb-scale-90 { width: 90%; height: 90%; object-fit: contain; }
+.thumbnail-img.thumb-scale-80 { width: 80%; height: 80%; object-fit: contain; }
+.thumbnail-img.thumb-scale-70 { width: 70%; height: 70%; object-fit: contain; }
+.thumbnail-img.thumb-scale-60 { width: 60%; height: 60%; object-fit: contain; }
+.thumbnail-img.thumb-scale-50 { width: 50%; height: 50%; object-fit: contain; }
+.thumbnail-img.thumb-scale-120 { width: 120%; height: 120%; object-fit: contain; }
 
 .project-placeholder {
     font-size: 14px;
@@ -490,16 +459,12 @@ body {
     }
 
     .work-container {
-        padding: 0;
+        padding: 100px 25px 40px;
     }
 
-    .carousel-wrapper {
-        padding: 0 40px;
-    }
-
-    .work-item {
-        min-width: calc(100% - 30px);
-        max-width: calc(100% - 30px);
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
     }
 
     .project-detail {
@@ -559,6 +524,10 @@ body {
 
     .nav-btn {
         font-size: 16px;
+    }
+
+    .work-grid {
+        gap: 40px;
     }
 
     .work-title {
