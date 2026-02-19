@@ -195,6 +195,25 @@ body {
     visibility: visible;
 }
 
+.hamburger-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    font-weight: 300;
+    line-height: 1;
+    transition: opacity 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.hamburger-close:hover {
+    opacity: 0.6;
+}
+
 .hamburger-content {
     display: flex;
     flex-direction: column;

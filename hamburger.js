@@ -3,6 +3,7 @@ const hamburgerTrigger = document.getElementById('hamburger-trigger');
 const hamburgerMenu = document.getElementById('hamburger-menu');
 
 const hamburgerIconTrigger = document.getElementById('hamburger-icon-trigger');
+const hamburgerClose = document.getElementById('hamburger-close');
 
 // Toggle menu when logo is clicked
 hamburgerTrigger.addEventListener('click', () => {
@@ -12,6 +13,11 @@ hamburgerTrigger.addEventListener('click', () => {
 // Toggle menu when hamburger icon is clicked
 hamburgerIconTrigger.addEventListener('click', () => {
     hamburgerMenu.classList.toggle('active');
+});
+
+// Close menu when X is clicked
+hamburgerClose.addEventListener('click', () => {
+    hamburgerMenu.classList.remove('active');
 });
 
 // Close menu when clicking outside the menu content
