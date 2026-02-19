@@ -2,6 +2,7 @@
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.querySelector('.lightbox-close');
+const lightboxBlurb = document.getElementById('lightbox-blurb');
 let isZoomed = false;
 
 // Get all project images
@@ -10,14 +11,18 @@ const projectImages = document.querySelectorAll('.project-img');
 // Add click event to all project images
 projectImages.forEach(img => {
     img.addEventListener('click', () => {
-        openLightbox(img.src, img.alt);
+        openLightbox(img.src, img.alt, img.dataset.caption || '');
     });
 });
 
 // Open lightbox
-function openLightbox(src, alt) {
+function openLightbox(src, alt, caption) {
     lightboxImg.src = src;
     lightboxImg.alt = alt;
+    if (lightboxBlurb) {
+        lightboxBlurb.textContent = caption;
+        lightboxBlurb.style.display = caption ? 'block' : 'none';
+    }
     lightbox.classList.add('active');
     isZoomed = false;
     lightboxImg.classList.remove('zoomed');
